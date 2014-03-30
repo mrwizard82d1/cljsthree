@@ -5,8 +5,3 @@
   ([] (linebasic {}))
   ([opts]
      (js/THREE.LineBasicMaterial. (map->js opts))))
-
-(extend-type js/THREE.LineBasicMaterial
-  IPrintable
-  (-pr-seq [o opts]
-    (list "#<LineBasicMaterial>")))

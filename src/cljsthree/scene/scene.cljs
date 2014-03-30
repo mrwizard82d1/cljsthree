@@ -8,7 +8,9 @@
     (.add s o))
   s)
 
-(defn remove [s & os]
+;; Although I would prefer the simple name 'remove,' this choice hides
+;; clojure.core/remove resulting in warnings when consumed in other code.
+(defn scene-remove [s & os]
   (doseq [o os]
     (.remove s o))
   s)
@@ -29,9 +31,6 @@
   (count (objects s)))
 
 (extend-type js/THREE.Scene 
-  IPrintable
-  (-pr-seq [o opts]
-    (list "#<Scene>"))
   ICounted
   (-count [o]
     (+ (light-count o) (object-count o))))

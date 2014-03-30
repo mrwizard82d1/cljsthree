@@ -14,8 +14,3 @@
 
 (defn look-at [c v]
   (.lookAt c v))
-
-(extend-type js/THREE.PerspectiveCamera
-  IPrintable
-  (-pr-seq [o opts]
-    (list "#<PerspectiveCamera>")))

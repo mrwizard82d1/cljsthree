@@ -25,8 +25,3 @@
 (defn vertices-count [g]
   (count (vertices g)))
 
-(extend-type js/THREE.Geometry
-  IPrintable  
-  (-pr-seq [o opts]
-    (list "#<Geometry>")))
-

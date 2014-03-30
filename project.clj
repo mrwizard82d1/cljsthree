@@ -1,2 +1,2 @@
-(defproject cljsthree "0.1.1"
+(defproject cljsthree "0.1.2-SNAPSHOT"
   :description "A clojurescript wrapper for three.js")

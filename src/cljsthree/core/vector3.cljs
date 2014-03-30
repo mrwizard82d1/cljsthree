@@ -28,9 +28,4 @@
 (extend-type js/THREE.Vector3
   ISeqable
   (-seq [o]
-    (list (x o) (y o) (z o)))
-  IPrintable  
-  (-pr-seq [o opts]
-    (list "#<Vector3 "
-          (apply str (interpose "," (list (x o) (y o) (z o))))
-          ">")))
+    (list (x o) (y o) (z o))))

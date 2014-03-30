@@ -1,5 +1,4 @@
-(ns cljsthree.core.objects.mesh
-  (:use [cljsthree.core.object3d :only [Position]]))
+(ns cljsthree.objects.mesh)
 
 (defn mesh 
   ([g] 
@@ -16,7 +15,3 @@
     (.set (position m) x y z))
   m)
 
-(extend-type js/THREE.Mesh 
-  IPrintable
-  (-pr-seq [o opts]
-    (list "#<Mesh>")))
